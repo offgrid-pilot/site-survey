@@ -12,42 +12,43 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap">
 <style>
-/* Layout: one narrow column like a pilot's kneeboard card; the sunrise band on top, one card per site. */
+/* Layout: one narrow column like a pilot's kneeboard card; the wilderness band on top, one card per site. */
 :root {
-  --bg: #f2f5f6;
+  /* Wilderness theme from the app (ui/theme/Theme.kt): lake teal accent, sky to forest gradient. */
+  --bg: #eef4f0;
   --surface: #ffffff;
-  --ink: #1b2a30;
-  --muted: #5b6b72;
-  --line: #d6dfe2;
-  --sky: #1f5e7e;
-  --accent: #cf5a26;
+  --ink: #1a2a24;
+  --muted: #56685f;
+  --line: #d2e0d6;
+  --sky: #2a5e33;
+  --accent: #22656e;
   --accent-ink: #ffffff;
-  --chip: #e7eef1;
-  --chip-on: #1f5e7e;
+  --chip: #e4eee7;
+  --chip-on: #22656e;
   --chip-on-ink: #ffffff;
-  --band-a: #b4dce8;
-  --band-b: #f6ebe0;
-  --band-c: #f3b88e;
+  --band-a: #b9dceb;
+  --band-b: #e6f0e6;
+  --band-c: #a9d2a8;
   --ok: #2a6e3f;
   --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
   --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #11181b; --surface: #1a2428; --ink: #e6eef0; --muted: #9aaab0; --line: #2c3a40;
-    --sky: #7fb6cf; --accent: #ec8f57; --accent-ink: #1b1209; --chip: #24323a; --chip-on: #7fb6cf; --chip-on-ink: #0d1a20;
-    --band-a: #1f4756; --band-b: #3a3330; --band-c: #6b3a22; --ok: #7fc795; color-scheme: dark;
+    --bg: #101814; --surface: #18231d; --ink: #e4eee7; --muted: #98aa9f; --line: #2a3a31;
+    --sky: #8dbf8a; --accent: #6fb3bc; --accent-ink: #0c1a1c; --chip: #223029; --chip-on: #6fb3bc; --chip-on-ink: #0c1a1c;
+    --band-a: #1f4f63; --band-b: #26382e; --band-c: #2a5e33; --ok: #7fc795; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #11181b; --surface: #1a2428; --ink: #e6eef0; --muted: #9aaab0; --line: #2c3a40;
-  --sky: #7fb6cf; --accent: #ec8f57; --accent-ink: #1b1209; --chip: #24323a; --chip-on: #7fb6cf; --chip-on-ink: #0d1a20;
-  --band-a: #1f4756; --band-b: #3a3330; --band-c: #6b3a22; --ok: #7fc795; color-scheme: dark;
+  --bg: #101814; --surface: #18231d; --ink: #e4eee7; --muted: #98aa9f; --line: #2a3a31;
+  --sky: #8dbf8a; --accent: #6fb3bc; --accent-ink: #0c1a1c; --chip: #223029; --chip-on: #6fb3bc; --chip-on-ink: #0c1a1c;
+  --band-a: #1f4f63; --band-b: #26382e; --band-c: #2a5e33; --ok: #7fc795; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
-.band { background: linear-gradient(180deg, var(--band-a) 0%, var(--band-b) 62%, var(--band-c) 100%); }
+.band { background: linear-gradient(180deg, var(--band-a) 0%, var(--band-b) 55%, var(--band-c) 100%); }
 .wrap { max-width: 720px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 header .wrap { padding-block: 36px 28px; }
 .eyebrow { font-family: var(--display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 14px; color: var(--sky); }
